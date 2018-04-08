@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@mipmap/main_customlist_item_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/view_grid_manager_info_window_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/five"
+        android:padding="@dimen/ten"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_gravity="right"
+        android:text="X" />
+
+    <LinearLayout
+        android:id="@+id/view_grid_manager_info_window_line1"
+        android:paddingLeft="@dimen/twenty"
+        android:paddingRight="@dimen/twenty"
+        android:paddingBottom="@dimen/ten"
+        android:layout_marginTop="-20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称:" />
+
+        <TextView
+            android:id="@+id/view_grid_manager_info_window_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:text="我是爸爸" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_grid_manager_info_window_line2"
+        android:layout_below="@id/view_grid_manager_info_window_line1"
+        android:paddingLeft="@dimen/twenty"
+        android:paddingRight="@dimen/twenty"
+        android:paddingBottom="@dimen/ten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址:" />
+
+        <TextView
+            android:id="@+id/view_grid_manager_info_window_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:text="文艺路" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/view_grid_manager_info_window_go"
+        android:layout_width="@dimen/seventy"
+        android:layout_height="@dimen/thirty"
+        android:layout_gravity="right"
+        android:text="查看详情"
+        android:textColor="@color/white"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginBottom="@dimen/twenty"
+        android:background="@drawable/btn_bg" />
+
+</LinearLayout>

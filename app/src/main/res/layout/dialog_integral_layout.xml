@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/gray_round_bg"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_round_bg"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:text="@string/integral_credits_exchange_str"
+            android:textColor="@color/color_three"
+            android:textSize="@dimen/fifteen"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/gray"/>
+
+        <EditText
+            android:id="@+id/dialog_integral_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ten"
+            android:hint="@string/integral_credits_exchange_input_str"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="@dimen/fifteen"
+            android:maxLength="30"/>
+
+        <Button
+            android:id="@+id/dialog_integral_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/fifteen"
+            android:text="@string/integral_credits_exchange_select_str"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

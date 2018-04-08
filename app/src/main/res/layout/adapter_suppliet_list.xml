@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/fifteen"
+    android:layout_marginRight="@dimen/fifteen"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--底部的文字布局-->
+    <RelativeLayout
+        android:background="@mipmap/main_customlist_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:paddingTop="@dimen/fifteen"
+        android:paddingBottom="@dimen/fifteen"
+        android:layout_marginRight="@dimen/thirty">
+        <TextView
+            android:id="@+id/adapter_supplier_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"/>
+        <TextView
+            android:id="@+id/adapter_supplier_list_subtitle"
+            android:layout_below="@id/adapter_supplier_list_title"
+            android:layout_marginTop="@dimen/five"
+            android:textSize="12sp"
+            android:textColor="#AAAAAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"/>
+
+        <LinearLayout
+            android:layout_below="@id/adapter_supplier_list_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/adapter_supplier_list_star"
+                style="@style/foodRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/eight"
+                android:layout_marginTop="@dimen/ten"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3.5" />
+
+            <TextView
+                android:id="@+id/adapter_supplier_list_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginLeft="@dimen/five"
+                android:minWidth="@dimen/fifty"
+                tools:background="#fff0f0f0"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/fifty"
+            android:layout_below="@id/adapter_supplier_list_subtitle"
+            android:columnCount="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="订单笔数"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/adapter_supplier_list_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:minWidth="@dimen/fifty"
+                tools:background="#fff0f0f0"
+                android:textColor="#30C7B2"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="销售金额"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/adapter_supplier_list_sale_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:minWidth="@dimen/fifty"
+                tools:background="#fff0f0f0"
+                android:textColor="#30C7B2"
+                android:textSize="10sp" />
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/adapter_supplier_list_image"
+        android:layout_width="@dimen/eighty"
+        android:layout_height="@dimen/sixty"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        tools:background="#fff0f0f0" />
+
+</RelativeLayout>

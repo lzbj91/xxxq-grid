@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.xxxq_grid.InformationResourceActivity">
+
+    <com.example.administrator.common.HeaderBar
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp" />
+
+    <!--整体布局 用权重 控制-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_green_theme"
+        android:orientation="horizontal">
+        <!--第一个标题-->
+        <LinearLayout
+            android:id="@+id/llServiceLayoutTitle"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvServiceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/ten"
+                android:text="服务内容"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen" />
+
+            <TextView
+                android:id="@+id/tvServiceBackground"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/two"
+                android:background="@color/white" />
+
+        </LinearLayout>
+        <!--第二个标题-->
+        <LinearLayout
+            android:id="@+id/llPersonLayoutTitle"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPersonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/ten"
+                android:text="会员信息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen" />
+
+            <TextView
+                android:id="@+id/tvPersonBackground"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/two"
+                android:background="@color/colorTransparent" />
+
+        </LinearLayout>
+        <!--第三个标题-->
+        <LinearLayout
+            android:id="@+id/llSupplierLayoutTitle"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSupplierText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/ten"
+                android:text="供应商信息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen" />
+
+            <TextView
+                android:id="@+id/tvSupplierBackground"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/two"
+                android:background="@color/colorTransparent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 正文布局-->
+    <!--第一个页面-->
+    <LinearLayout
+        android:id="@+id/llServiceLayoutContext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <include layout="@layout/view_information_resource_content1"></include>
+    </LinearLayout>
+    <!--第二个页面-->
+    <LinearLayout
+        android:id="@+id/llPersonLayoutContext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/view_information_resource_content2"></include>
+    </LinearLayout>
+    <!--第三个页面-->
+    <LinearLayout
+        android:id="@+id/llSupplierLayoutContext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/view_information_resource_content3"></include>
+    </LinearLayout>
+</LinearLayout>

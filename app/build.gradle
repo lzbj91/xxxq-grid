@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyPassword '123456'
+            storeFile file('/Users/Cary/Documents/svnfolder/xxxqgrid/fooshion.keystore')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.administrator.xxxq_grid"
+        minSdkVersion 15
+        targetSdkVersion 26
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "8def3bc5bb6f4f7b4613dfb3", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "71576b8182d51928c611809e", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs file('libs')
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        //instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+    allprojects {
+        repositories {
+            jcenter() // 或者 mavenCentral()
+            maven { url "https://jitpack.io" }
+            mavenCentral()
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation files('libs/insplatform-core-1.0-SNAPSHOT.jar')
+    implementation files('libs/okhttp-3.10.0.jar')
+    implementation files('libs/fastjson-1.2.39.jar')
+    implementation files('libs/okio-1.14.0.jar')
+    //统计图表
+    implementation files('libs/hellocharts-library-1.5.8.jar')
+    //高德地图
+    implementation files('libs/AMap3DMap_6.0.0_AMapSearch_5.7.0_20180211.jar')
+    //图片选择器
+    api 'com.github.donkingliang:ImageSelector:1.2.0'
+    //loading加载框
+    api 'com.github.ForgetAll:LoadingDialog:v1.0.4'
+    //页面显示图片
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    //平台json转换相关依赖jar
+    api 'com.fasterxml.jackson.core:jackson-databind:2.7.4'
+    //上拉加载,下拉刷新
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-1'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-1'//没有使用特殊Header，可以不加这行
+    api 'com.android.support:appcompat-v7:25.3.1'//版本随意（必须）
+    //图片预览
+    api 'liji.library.dev:imagezoom:1.2.1'
+    //baseadapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
+    //gson
+    api 'com.google.code.gson:gson:2.8.0'
+    //jsoup
+    api group: 'org.jsoup', name: 'jsoup', version: '1.5.2'
+    //极光推送
+    api 'cn.jiguang.sdk:jpush:3.1.1'  // 此处以JPush 3.1.1 版本为例。
+    api 'cn.jiguang.sdk:jcore:1.1.9'  // 此处以JCore 1.1.9 版本为例。
+}

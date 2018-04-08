@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.amap.api.maps.MapView>
+
+    <Button
+        android:id="@+id/activity_grid_manager_go_back"
+        android:layout_width="@dimen/forty"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/thirty"
+        android:layout_marginLeft="@dimen/ten"
+        android:background="@drawable/go_back" />
+
+    <Button
+        android:id="@+id/activity_grid_manager_go_list"
+        android:layout_width="@dimen/hundred"
+        android:layout_height="@dimen/forty"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginTop="@dimen/fifty"
+        android:background="@drawable/btn_bg"
+        android:text="去列表"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

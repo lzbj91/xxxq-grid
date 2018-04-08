@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/fifteen"
+    android:layout_marginRight="@dimen/fifteen"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--底部的文字布局-->
+    <RelativeLayout
+        android:background="@mipmap/main_customlist_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fifteen">
+
+        <ImageView
+            android:id="@+id/adapter_member_convertibility_records_list_pic"
+            android:layout_width="@dimen/eighty"
+            android:layout_height="@dimen/sixty"
+            tools:background="#fff0f0f0"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/adapter_member_convertibility_records_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/adapter_member_convertibility_records_list_pic"
+            android:layout_marginLeft="@dimen/ten"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"/>
+
+        <TextView
+            android:id="@+id/adapter_member_convertibility_records_list_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adapter_member_convertibility_records_list_name"
+            android:layout_toRightOf="@id/adapter_member_convertibility_records_list_pic"
+            android:layout_marginLeft="@dimen/ten"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:layout_marginTop="@dimen/five"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"
+            android:text="卡号: "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实物"
+            android:textColor="@color/color_green_theme"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/five"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/adapter_member_convertibility_records_list_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EAEAEA"
+            android:layout_below="@id/adapter_member_convertibility_records_list_pic"
+            android:layout_marginTop="@dimen/five"/>
+
+        <TextView
+            android:id="@+id/adapter_member_convertibility_records_list_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"
+            android:layout_below="@id/adapter_member_convertibility_records_list_line"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:layout_marginTop="@dimen/five"
+            />
+
+        <TextView
+            android:id="@+id/adapter_member_convertibility_records_list_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"
+            android:layout_below="@id/adapter_member_convertibility_records_list_line"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/five"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

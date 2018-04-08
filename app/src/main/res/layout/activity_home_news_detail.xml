@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.xxxq_grid.HomeNewsDetailActivity">
+
+
+    <com.example.administrator.common.HeaderBar
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+    </com.example.administrator.common.HeaderBar>
+
+
+    <ProgressBar
+        android:id="@+id/activity_home_news_detail_text_progressBar"
+         android:layout_width="match_parent"
+        android:progressDrawable="@drawable/homenews_detail_progress_bar"
+        android:indeterminateOnly="false"
+        android:indeterminateDrawable="@drawable/homenews_detail_progress_bar"
+        android:minHeight="@dimen/twenty"
+        android:maxHeight="@dimen/twenty"
+        android:mirrorForRtl="true"
+        android:layout_height="@dimen/five" />
+
+    <!--显示网页区域-->
+    <WebView
+        android:id="@+id/activity_home_news_detail_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/five" />
+
+</LinearLayout>

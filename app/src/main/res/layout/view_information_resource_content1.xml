@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/ten"
+            android:orientation="vertical">
+
+            <!--订单笔数-->
+            <LinearLayout
+                android:id="@+id/view_information_resource_content1_month_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/view_information_resource_content1_month"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2019年12月" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rili" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/three"
+                android:background="@color/color_green_theme" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:orientation="horizontal"
+                android:padding="@dimen/ten">
+
+                <TextView
+                    android:layout_width="@dimen/five"
+                    android:layout_height="@dimen/twenty"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:layout_weight="1"
+                    android:text="订单笔数" />
+
+                <TextView
+                    android:id="@+id/view_information_resource_content1_order_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="390笔" />
+            </LinearLayout>
+
+            <lecho.lib.hellocharts.view.ColumnChartView
+                android:id="@+id/view_information_resource_content1_column_chart1"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ten"
+                android:text="订单笔数 (月季度)" />
+
+            <TextView
+                android:id="@+id/view_information_resource_content1_month_show1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/ten"
+                android:paddingLeft="@dimen/ten"
+                android:text="2月" />
+
+            <Button
+                android:onClick="informationOrderList"
+                android:layout_width="@dimen/hundred"
+                android:layout_height="@dimen/forty"
+                android:layout_marginBottom="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:background="@drawable/btn_bg"
+                android:text="查看"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/three"
+                android:background="@color/color_green_theme" />
+
+            <!--完成量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:orientation="horizontal"
+                android:padding="@dimen/ten">
+
+                <TextView
+                    android:layout_width="@dimen/five"
+                    android:layout_height="@dimen/twenty"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:layout_weight="1"
+                    android:text="完成量" />
+
+                <TextView
+                    android:id="@+id/view_information_resource_content1_complete_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="120笔" />
+            </LinearLayout>
+
+            <lecho.lib.hellocharts.view.ColumnChartView
+                android:id="@+id/view_information_resource_content1_column_chart2"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_margin="10dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ten"
+                android:text="完成笔数 (月季度)" />
+
+            <TextView
+                android:id="@+id/view_information_resource_content1_month_show2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/ten"
+                android:paddingLeft="@dimen/ten"
+                android:text="2月" />
+
+            <Button
+                android:onClick="informationOrderList"
+                android:layout_width="@dimen/hundred"
+                android:layout_height="@dimen/forty"
+                android:layout_marginBottom="@dimen/forty"
+                android:layout_marginLeft="@dimen/ten"
+                android:background="@drawable/btn_bg"
+                android:text="查看"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.xxxq_grid.MemberDetailsHasListActivity">
+
+    <com.example.administrator.common.HeaderBar
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+    </com.example.administrator.common.HeaderBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--头部-->
+            <RelativeLayout
+                android:id="@+id/activity_member_details_top_bg"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/member_bg">
+
+                <!--内容-->
+                <LinearLayout
+                    android:id="@+id/activity_member_details_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.example.administrator.view.AvatarImageView
+                        android:id="@+id/activity_member_details_avatar"
+                        android:layout_width="@dimen/sixty"
+                        android:layout_height="@dimen/sixty"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/ten"
+                        android:src="@drawable/photo" />
+
+                    <TextView
+                        android:id="@+id/activity_member_details_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/ten"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/activity_member_details_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/activity_member_details_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!--余额部分-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_member_details_top"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/fifteen"
+                    android:background="@drawable/member_balance">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ninety"
+                        android:layout_marginTop="@dimen/sixty"
+                        android:text="会员卡余额" />
+
+                    <TextView
+                        android:id="@+id/activity_member_details_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/thirty"
+                        android:layout_marginTop="55dp"
+                        android:minWidth="@dimen/fifty"
+                        tools:background="#fff0f0f0"
+                        android:textColor="#30C7B2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/fifteen"
+                        android:layout_marginTop="62dp"
+                        android:text="元"
+                        android:textColor="#30C7B2"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_member_details_top_bg"
+                android:orientation="vertical">
+                <!--分割线-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ten"
+                    android:background="#EAEAEA" />
+                <!--第一行-->
+                <RelativeLayout
+                    android:id="@+id/activity_member_details_index1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/activity_member_details_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/thirteen"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/records_of_consumption" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/activity_member_details_1"
+                        android:layout_marginLeft="@dimen/thirteen"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/activity_member_details_1"
+                        android:layout_toRightOf="@id/activity_member_details_1"
+                        android:text="消费记录" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:src="@drawable/right" />
+
+                </RelativeLayout>
+                <!--分割线-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ten"
+                    android:background="#EAEAEA" />
+
+                <!--第二行-->
+                <RelativeLayout
+                    android:id="@+id/activity_member_details_index2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/activity_member_details_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/thirteen"
+                        android:src="@drawable/store_exchange" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/thirteen"
+                        android:layout_toEndOf="@id/activity_member_details_2"
+                        android:layout_toRightOf="@id/activity_member_details_2"
+                        android:text="积分兑换记录" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:src="@drawable/right" />
+
+                </RelativeLayout>
+                <!--分割线-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ten"
+                    android:background="#EAEAEA" />
+
+                <!--第三行-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/activity_member_details_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/thirteen"
+                        android:src="@drawable/member_recharge" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/thirteen"
+                        android:layout_toEndOf="@id/activity_member_details_3"
+                        android:layout_toRightOf="@id/activity_member_details_3"
+                        android:text="会员充值" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:src="@drawable/down" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EAEAEA" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fifteen"
+                    android:text="会员充值"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+
+                <!--第一排充值金额-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/fifteen"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/activity_member_details_money_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:background="@drawable/recharge_down"
+                        android:text="50元"
+                        android:textColor="@color/color_green_theme" />
+
+                    <Button
+                        android:id="@+id/activity_member_details_money_100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:background="@drawable/recharge_up"
+                        android:text="100元"
+                        android:textColor="@color/color_green_theme" />
+
+                    <Button
+                        android:id="@+id/activity_member_details_money_200"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:background="@drawable/recharge_up"
+                        android:text="200元"
+                        android:textColor="@color/color_green_theme" />
+                </LinearLayout>
+
+                <!--第二排充值金额-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/fifteen"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/activity_member_details_money_500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:background="@drawable/recharge_up"
+                        android:text="500元"
+                        android:textColor="@color/color_green_theme" />
+
+                    <Button
+                        android:id="@+id/activity_member_details_money_1000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:background="@drawable/recharge_up"
+                        android:text="1000元"
+                        android:textColor="@color/color_green_theme" />
+
+                    <Button
+                        android:id="@+id/activity_member_details_money_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:background="@drawable/recharge_up"
+                        android:text="其他金额"
+                        android:textColor="@color/color_green_theme" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/activity_member_details_money_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/twenty"
+                    android:layout_marginTop="@dimen/twenty"
+                    android:background="@drawable/recharge_submit_up" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

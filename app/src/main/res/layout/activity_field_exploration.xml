@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.xxxq_grid.FieldExplorationActivity">
+
+    <com.example.administrator.common.HeaderBar
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+    </com.example.administrator.common.HeaderBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent">
+
+            <!--供应商-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sixty"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/fifteen">
+
+                <TextView
+                    android:layout_width="@dimen/two"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:text="供应商" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:text="*"
+                    android:textColor="#FF0000" />
+
+                <Spinner
+                    android:id="@+id/activity_field_exploration_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_gravity="center_vertical"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="#EAEAEA" />
+
+            <!--侦查日期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sixty"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/fifteen">
+
+                <TextView
+                    android:layout_width="@dimen/two"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:text="侦查日期" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:text="*"
+                    android:textColor="#FF0000" />
+
+                <TextView
+                    android:id="@+id/activity_field_exploration_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="#EAEAEA" />
+
+            <!--侦查时间-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sixty"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/fifteen">
+
+                <TextView
+                    android:layout_width="@dimen/two"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:text="侦查时间" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:text="*"
+                    android:textColor="#FF0000" />
+
+                <TextView
+                    android:id="@+id/activity_field_exploration_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="#EAEAEA" />
+
+            <!--评价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:paddingTop="@dimen/five">
+
+                <TextView
+                    android:layout_width="@dimen/two"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:text="评价" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:text="*"
+                    android:textColor="#FF0000" />
+
+                <RatingBar
+                    android:id="@+id/activity_field_exploration_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:progressTint="@color/orange"
+                    android:rating="5"
+                    android:secondaryProgressTint="@color/white"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="#EAEAEA" />
+
+            <!--评价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/fifteen">
+
+                <TextView
+                    android:layout_width="@dimen/two"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:text="侦查内容" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:text="*"
+                    android:textColor="#FF0000" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/activity_field_exploration_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:padding="@dimen/five"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:layout_marginBottom="@dimen/fifteen"
+                android:background="#EAEAEA"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="#EAEAEA" />
+
+
+            <!--上传勘察照片-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/fifteen">
+
+                <TextView
+                    android:layout_width="@dimen/two"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_green_theme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:text="上传勘察照片" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:text="*"
+                    android:textColor="#FF0000" />
+            </LinearLayout>
+
+            <com.example.administrator.common.CustomGridView
+                android:id="@+id/activity_field_exploration_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:layout_gravity="center">
+            </com.example.administrator.common.CustomGridView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fourteen"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/activity_field_exploration_picture_chooser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upload_pic"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="#EAEAEA" />
+
+            <Button
+                android:id="@+id/activity_field_exploration_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg"
+                android:text="上传信息"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/fifteen"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/main_customlist_item_bg"
+    android:layout_marginRight="@dimen/fifteen"
+    android:layout_marginLeft="@dimen/fifteen"
+    android:paddingBottom="@dimen/fifteen"
+    android:paddingLeft="@dimen/ten"
+    android:paddingRight="@dimen/ten"
+    android:paddingTop="@dimen/fifteen">
+
+    <!--底部的文字布局-->
+    <com.example.administrator.view.AvatarImageView
+        android:id="@+id/adapter_member_list_avatar"
+        android:layout_width="@dimen/fifty"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_centerVertical="true"
+        android:src="@drawable/home"
+        tools:background="#fff0f0f0" />
+
+    <TextView
+        android:id="@+id/adapter_member_list_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/adapter_member_list_avatar"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginStart="@dimen/twenty"
+        android:layout_toEndOf="@+id/adapter_member_list_avatar"
+        android:layout_toRightOf="@+id/adapter_member_list_avatar"
+        android:minWidth="@dimen/fifty"
+        tools:background="#fff0f0f0"
+        android:textColor="#999999" />
+
+    <LinearLayout
+        android:id="@+id/adapter_member_list_topLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/adapter_member_list_phone"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="最近消费金额: "/>
+        <TextView
+            android:id="@+id/adapter_member_list_sale_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"
+            android:textSize="12sp"
+            android:textColor="#30C7B2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adapter_member_list_bottomLinearLayout"
+        android:layout_below="@id/adapter_member_list_topLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="更新时间: "/>
+        <TextView
+            android:id="@+id/adapter_member_list_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/fifty"
+            tools:background="#fff0f0f0"
+            android:textSize="12sp"
+            android:textColor="#999999"/>
+    </LinearLayout>
+
+</RelativeLayout>

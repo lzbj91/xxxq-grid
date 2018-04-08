@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.xxxq_grid.SupplierDetailsHasListActivity">
+
+    <com.example.administrator.common.HeaderBar
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+    </com.example.administrator.common.HeaderBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--包裹滚动的base布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/supplier_bg">
+
+            <!--头部纵向布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <com.example.administrator.view.AvatarImageView
+                    android:id="@+id/activity_supplier_detail_avatar"
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="@dimen/eighty"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/home"
+                    tools:background="#fff0f0f0" />
+
+                <!--平分布局-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        android:id="@+id/activity_supplier_detail_ratingBar"
+                        style="@style/foodRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/eight"
+                        android:layout_marginTop="@dimen/ten"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="3.5" />
+
+                    <TextView
+                        android:id="@+id/activity_supplier_detail_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/five"
+                        android:minWidth="@dimen/fifty"
+                        android:textSize="12sp"
+                        tools:background="#fff0f0f0" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/activity_supplier_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="@dimen/fifty"
+                    android:textSize="16sp"
+                    tools:background="#fff0f0f0" />
+
+                <TextView
+                    android:id="@+id/activity_supplier_detail_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/five"
+                    android:minWidth="@dimen/fifty"
+                    android:text="地址: "
+                    android:textColor="#999999"
+                    android:textSize="11sp"
+                    tools:background="#fff0f0f0" />
+
+                <TextView
+                    android:id="@+id/activity_supplier_detail_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="@dimen/fifty"
+                    android:text="电话: "
+                    android:textColor="#999999"
+                    android:textSize="11sp"
+                    tools:background="#fff0f0f0" />
+
+                <!--中间列表布局-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fifteen"
+                    android:background="@mipmap/main_customlist_item_bg"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/activity_supplier_detail_list1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/forty"
+                        android:layout_marginBottom="@dimen/fifteen"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/fifteen"
+                        android:layout_marginTop="@dimen/twenty">
+
+                        <ImageView
+                            android:id="@+id/activity_supplier_detail_icon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/service_order" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/twenty"
+                            android:layout_toRightOf="@id/activity_supplier_detail_icon1"
+                            android:text="供应商服务订单" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/right" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EAEAEA" />
+
+                    <RelativeLayout
+                        android:id="@+id/activity_supplier_detail_list2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/forty"
+                        android:layout_margin="@dimen/fifteen">
+
+                        <ImageView
+                            android:id="@+id/activity_supplier_detail_icon2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/service_evaluation" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/twenty"
+                            android:layout_toRightOf="@id/activity_supplier_detail_icon2"
+                            android:text="供应商服务评价" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/right" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EAEAEA" />
+
+                    <RelativeLayout
+                        android:id="@+id/activity_supplier_detail_list3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/forty"
+                        android:layout_marginBottom="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/fifteen"
+                        android:layout_marginTop="@dimen/fifteen">
+
+                        <ImageView
+                            android:id="@+id/activity_supplier_detail_icon3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/field_investigation" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/twenty"
+                            android:layout_toRightOf="@id/activity_supplier_detail_icon3"
+                            android:text="现场勘查" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/five"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/fifteen">
+
+                    <TextView
+                        android:id="@+id/activity_supplier_detail_service_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_merchant_order" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/one"
+                        android:layout_below="@id/activity_supplier_detail_service_order"
+                        android:layout_marginTop="@dimen/five"
+                        android:background="#EAEAEA" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/activity_supplier_detail_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"
+                        android:listSelector="@android:color/transparent"
+                        android:scrollbars="vertical">
+
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/activity_supplier_detail_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/fifteen"
+                    android:text="点击查看更多"
+                    android:textColor="@color/color_green_theme"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
