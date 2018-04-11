@@ -128,7 +128,8 @@
         <activity android:name=".ContentServiceActivity" />
         <activity android:name=".InformationMemberListActivity" />
         <activity android:name=".InformationSupplierListActivity" />
-        <activity android:name=".MessageListActivity"></activity>
+        <activity android:name=".MessageListActivity" />
+        <activity android:name=".SearchActivity"></activity>
     </application>
 
 </manifest>

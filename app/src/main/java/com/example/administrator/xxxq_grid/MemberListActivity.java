@@ -137,8 +137,19 @@ public class MemberListActivity extends BaseActivity {
     protected void initTitle() {
         BaseUtils.initHeaderBar(this);
         HeaderBar headerBar = (HeaderBar) this.findViewById(R.id.headerBar);
-        headerBar.initViewsVisible(true, true, false, false);
+        headerBar.setRightIcon(R.drawable.search);
+        headerBar.initViewsVisible(true, true, true, false);
         headerBar.setAppTitle("会员列表");
+        headerBar.setOnRightButtonClickListener(new HeaderBar.OnRightButtonClickListener() {
+            @Override
+            public void OnRightButtonClick(View v) {
+                Intent intent = new Intent(MemberListActivity.this, SearchActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putCharSequence("type", "member");
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
         headerBar.setOnLeftButtonClickListener(new HeaderBar.OnLeftButtonClickListener() {
             @Override
             public void onLeftButtonClick(View v) {

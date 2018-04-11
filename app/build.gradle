@@ -4,7 +4,7 @@ android {
     signingConfigs {
         release {
             keyPassword '123456'
-            storeFile file('/Users/Cary/Documents/svnfolder/xxxqgrid/fooshion.keystore')
+            storeFile file('F:/android/workspace_new/xxxqgrid/fooshion.keystore')
             storePassword '123456'
         }
     }

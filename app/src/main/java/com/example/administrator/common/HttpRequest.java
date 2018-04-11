@@ -30,8 +30,8 @@ import okhttp3.Response;
 public class HttpRequest {
 
     //内网
-//    private final String URL = "http://192.168.100.132/insproject-web-app-grid/app/";
-//    private final String FILE_URL = "http://192.168.100.132/insproject-file";
+//    private final String URL = "http://192.168.200.72/insproject-web-app-grid/app/";
+//    private final String FILE_URL = "http://192.168.200.72/insproject-file";
 
     //服务器
     private final String URL = "http://111.20.150.254:6018/insproject-web-app-grid/app/";
@@ -61,8 +61,17 @@ public class HttpRequest {
      * @param data,以map的形式传递参数
      * @param callBackSuccess,回调callback
      */
-    public void post(Context context, String url, Map<String, Object> data, final CallBackSuccess callBackSuccess) {
-        post(context, url, data, callBackSuccess, false);
+    public void post(final Context context, String url, Map<String, Object> data, final CallBackSuccess callBackSuccess) {
+        if (BaseUtils.isNetworkConnected(context)) {
+            post(context, url, data, callBackSuccess, false);
+        } else {
+            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(context, "请先检查网络链接!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     public void post(final Context context, String url, Map<String, Object> data, final CallBackSuccess callBackSuccess, boolean showLoading) {

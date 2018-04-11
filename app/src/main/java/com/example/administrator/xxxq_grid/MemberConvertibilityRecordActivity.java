@@ -82,7 +82,7 @@ public class MemberConvertibilityRecordActivity extends BaseActivity {
             currentPage = page;
         }
         map.put("id", id);
-        map.put("limit", 5);
+        map.put("limit", 20);
         map.put("page", page);
         new HttpRequest().post(MemberConvertibilityRecordActivity.this, "member/loadIgOrderUser", map, new CallBackSuccess() {
             @Override
